@@ -9,9 +9,8 @@ for i in range (n_cards):
     p_cards.append(n_cards)
     n_cards-=1
 random.shuffle(p_cards) 
-pp1=0
-pp2=0
-points=[pp1,pp2]
+
+points=[0,0]
 print("Player 1 is your turn to play")
 p_cards_1=[]
 p_cards_2=[]
@@ -29,7 +28,7 @@ while len(board_1)!=len(p_cards_1):
             board_2.append(i)   
 print (board_1)
 print (board_2)
-sum_total=pp1+pp2
+sum_total=points[0]+points[1]
 while sum_total!=n_card: 
     print(points,"points")
     print("Player 1 is your turn to play")
@@ -83,7 +82,7 @@ while sum_total!=n_card:
             help_issue2-=1
         if search_p_c[0]==search_p_c[1]:
             pj1="a"
-            pp1+=1
+            points[0]+=1
             if board_1.count(search_p_c[0])==1:
                 board_1.remove(search_p_c[0])
             else:
@@ -159,7 +158,7 @@ while sum_total!=n_card:
             help_issue2-=1
         if search_p_c[0]==search_p_c[1]:
             pj2="a"
-            pp2+=1
+            points[1]+=1
             if board_1.count(search_p_c[0])==1:
                 board_1.remove(search_p_c[0])
             else:
