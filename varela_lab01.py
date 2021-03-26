@@ -83,11 +83,11 @@ while sum_total!=n_card:
         if search_p_c[0]==search_p_c[1]:
             pj1="a"
             points[0]+=1
-            if board_1.count(search_p_c[0])==1:
+            if board_1.count(search_p_c[0])==1 or board_1.count(search_p_c[0])==2 :
                 board_1.remove(search_p_c[0])
             else:
                 board_2.remove(search_p_c[0])
-            if board_2.count(search_p_c[0])==1:
+            if board_2.count(search_p_c[0])==1 or board_2.count(search_p_c[0])==2:
                 board_2.remove(search_p_c[0])
             else:
                 board_1.remove(search_p_c[0])
@@ -159,11 +159,11 @@ while sum_total!=n_card:
         if search_p_c[0]==search_p_c[1]:
             pj2="a"
             points[1]+=1
-            if board_1.count(search_p_c[0])==1:
+            if board_1.count(search_p_c[0])==1 or board_1.count(search_p_c[0])==2:
                 board_1.remove(search_p_c[0])
             else:
                 board_2.remove(search_p_c[0])
-            if board_2.count==1(search_p_c[0]):
+            if board_2.count(search_p_c[0])==1 or board_2.count(search_p_c[0])==2:
                 board_2.remove(search_p_c[0])
             else:
                 board_1.remove(search_p_c[0])
