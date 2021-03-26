@@ -106,8 +106,9 @@ while sum_total!=n_card:
                 if board_2[help_issue4]!="*":
                     board_2[help_issue4]="*"
                 help_issue4-=1
-        print(points,"points")
         print("player 2 is your turn to play")
+        print(board_1)
+        print(board_2)
     pj2="a"
     while pj2=="a":
         pj2=0
