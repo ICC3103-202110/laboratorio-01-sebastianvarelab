@@ -51,7 +51,7 @@ while sum_total!=n_card:
         if coordinate_1_y==0:
             board_1[coordinate_1_x]=p_cards_1[coordinate_1_x]
         else:
-            board_2[coordinate_1_y]=p_cards_2[coordinate_1_y]
+            board_2[coordinate_1_x]=p_cards_2[coordinate_1_y]
         coordinate_2_x=int(input("choose your second card coordinate x "))
         while len(board_1)<=coordinate_2_x:
             print("your x coordinate doesn´t exists")
@@ -67,7 +67,7 @@ while sum_total!=n_card:
         if coordinate_2_y==0:
             board_1[coordinate_2_x]=p_cards_1[coordinate_2_x]
         else:
-            board_2[coordinate_2_y]=p_cards_2[coordinate_2_y]
+            board_2[coordinate_2_x]=p_cards_2[coordinate_2_y]
         print(board_1)
         print(board_2)
         search_p_c=[]
@@ -84,8 +84,14 @@ while sum_total!=n_card:
         if search_p_c[0]==search_p_c[1]:
             pj1="a"
             pp1+=1
-            board_1.remove(search_p_c[0])
-            board_2.remove(search_p_c[0])
+            if board_1.count(search_p_c[0])==1:
+                board_1.remove(search_p_c[0])
+            else:
+                board_2.remove(search_p_c[0])
+            if board_2.count(search_p_c[0])==1:
+                board_2.remove(search_p_c[0])
+            else:
+                board_1.remove(search_p_c[0])
             print(points,"points")
             search_p_c=[]
         else:
@@ -100,7 +106,6 @@ while sum_total!=n_card:
                 if board_2[help_issue4]!="*":
                     board_2[help_issue4]="*"
                 help_issue4-=1
-###########################################################################################
         print(points,"points")
         print("player 2 is your turn to play")
     pj2="a"
@@ -121,7 +126,7 @@ while sum_total!=n_card:
         if coordinate_1_y==0:
             board_1[coordinate_1_x]=p_cards_1[coordinate_1_x]
         else:
-            board_2[coordinate_1_y]=p_cards_2[coordinate_1_y]
+            board_2[coordinate_1_x]=p_cards_2[coordinate_1_y]
         coordinate_2_x=int(input("choose your second card coordinate x "))
         while len(board_1)<=coordinate_2_x:
             print("your x coordinate doesn´t exists")
@@ -137,7 +142,7 @@ while sum_total!=n_card:
         if coordinate_2_y==0:
             board_1[coordinate_2_x]=p_cards_1[coordinate_2_x]
         else:
-            board_2[coordinate_2_y]=p_cards_2[coordinate_2_y]
+            board_2[coordinate_2_x]=p_cards_2[coordinate_2_y]
         print(board_1)
         print(board_2)
         search_p_c=[]
@@ -154,8 +159,16 @@ while sum_total!=n_card:
         if search_p_c[0]==search_p_c[1]:
             pj2="a"
             pp2+=1
-            board_1.remove(search_p_c[0])
-            board_2.remove(search_p_c[0])
+            if board_1.count(search_p_c[0])==1:
+                board_1.remove(search_p_c[0])
+            else:
+                board_2.remove(search_p_c[0])
+            if board_2.count==1(search_p_c[0]):
+                board_2.remove(search_p_c[0])
+            else:
+                board_1.remove(search_p_c[0])
+            print(points,"points")
+            search_p_c=[]
             print(points,"points")
         else:
             help_issue3=len(board_1)-1
