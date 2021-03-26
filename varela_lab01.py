@@ -50,6 +50,9 @@ while sum_total!=n_card:
         if coordinate_1_y==0:
             board_1[coordinate_1_x]=p_cards_1[coordinate_1_x]
         else:
+            if len (board_2)<=coordinate_1_x:
+                print("your x value is out of the range, please take other value")
+                coordinate_1_x=int(input("choose your first card coordinate x "))
             board_2[coordinate_1_x]=p_cards_2[coordinate_1_y]
         coordinate_2_x=int(input("choose your second card coordinate x "))
         while len(board_1)<=coordinate_2_x:
@@ -126,6 +129,9 @@ while sum_total!=n_card:
         if coordinate_1_y==0:
             board_1[coordinate_1_x]=p_cards_1[coordinate_1_x]
         else:
+            if len (board_2)<=coordinate_1_x:
+                print("your x value is out of the range, please take other value")
+                coordinate_1_x=int(input("choose your first card coordinate x "))
             board_2[coordinate_1_x]=p_cards_2[coordinate_1_y]
         coordinate_2_x=int(input("choose your second card coordinate x "))
         while len(board_1)<=coordinate_2_x:
